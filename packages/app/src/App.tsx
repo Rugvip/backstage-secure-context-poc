@@ -1,8 +1,14 @@
 import { makeStyles } from '@material-ui/core';
-import { createApp } from '@backstage/core';
+import {
+  createApp,
+  ApiRegistry,
+  alertApiRef,
+  AlertApiForwarder,
+} from '@backstage/core';
 import React, { FC } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import * as plugins from './plugins';
+import AlertDisplay from './components/AlertDisplay';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -22,7 +28,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+const apisBuilder = ApiRegistry.builder();
+
+const forwarder = apisBuilder.add(alertApiRef, new AlertApiForwarder());
+
+const apis = apisBuilder.build();
+
 const app = createApp({
+  apis,
   plugins: Object.values(plugins),
 });
 
@@ -33,6 +46,7 @@ const App: FC<{}> = () => {
   useStyles();
   return (
     <AppProvider>
+      <AlertDisplay forwarder={forwarder} />
       <Router>
         <AppComponent />
       </Router>
