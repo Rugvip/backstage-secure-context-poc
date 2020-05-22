@@ -1,0 +1,10 @@
+{
+  "id": "vault-item",
+  "title": "Access to Item in Secret Vault",
+  "body": [
+    "Do you want to allow access to the following item",
+    "in your secret vault?",
+    "",
+    "{{ item.name }}"
+  ]
+}

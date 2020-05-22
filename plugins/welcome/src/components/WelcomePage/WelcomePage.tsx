@@ -11,12 +11,27 @@ import {
   useApi,
   alertApiRef,
 } from '@backstage/core';
+import { secureContextApiRef } from 'secure-context';
+import secureVaultItem from '../../../secure/vault-item.json';
 
 const WelcomePage: FC<{}> = () => {
   const alertApi = useApi(alertApiRef);
+  const secureContextApi = useApi(secureContextApiRef);
 
-  const handleClick = () => {
-    alertApi.post({ message: 'ACCESS GRANTED' });
+  const handleClick = async () => {
+    try {
+      const monaLisa = await secureContextApi.execute(secureVaultItem, {
+        item: {
+          name: 'mona-lisa',
+        },
+      });
+      // eslint-disable-next-line no-console
+      console.log('We got the Mona Lista!', monaLisa);
+
+      alertApi.post({ message: 'ACCESS GRANTED' });
+    } catch {
+      alertApi.post({ message: 'ACCESS DENIED', severity: 'error' });
+    }
   };
 
   return (
@@ -30,7 +45,7 @@ const WelcomePage: FC<{}> = () => {
           <Grid item xs={12} md={4}>
             <InfoCard>
               <Button variant="contained" color="primary" onClick={handleClick}>
-                Access Secrets
+                Access Vault
               </Button>
             </InfoCard>
           </Grid>
