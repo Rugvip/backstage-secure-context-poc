@@ -2,6 +2,7 @@ import fs from 'fs-extra';
 import { Router as createRouter } from 'express';
 import { dirname, resolve as resolvePath } from 'path';
 import { transform } from 'sucrase';
+import { Script } from 'vm';
 
 type Options = {
   plugins: string[];
@@ -11,7 +12,7 @@ type Action = {
   id: string;
   title: string;
   body: string;
-  script: string;
+  code: string;
 };
 
 export async function readAction(
@@ -25,12 +26,12 @@ export async function readAction(
     filePath,
   });
 
-  return {
-    id: 'lol',
-    title: 'wut',
-    body: 'asd',
-    script: code,
-  };
+  const script = new Script(code);
+  const context = { exports: {} };
+  script.runInNewContext(context);
+  const { id, title, body } = context.exports as any;
+
+  return { id, title, body, code };
 }
 
 export async function secureContextServer(options: Options) {
