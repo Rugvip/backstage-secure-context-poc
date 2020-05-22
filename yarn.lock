@@ -2207,6 +2207,11 @@
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.3.tgz#5405ee8e444ed212db44e79351f0c70a582aae25"
   integrity sha1-VAXujkRO0hLbROeTUfDHClgqriU=
 
+"@sindresorhus/is@^0.14.0":
+  version "0.14.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
+  integrity sha1-n7OjzzEyMoFR81PeRjLgHlIQK+o=
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@sinonjs/commons/-/commons-1.8.0.tgz#c8d68821a854c555bba172f3b06959a0039b236d"
@@ -2313,6 +2318,13 @@
   dependencies:
     loader-utils "^1.1.0"
 
+"@szmarczak/http-timer@^1.1.2":
+  version "1.1.2"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@szmarczak/http-timer/-/http-timer-1.1.2.tgz#b1665e2c461a2cd92f4c1bbf50d5454de0d4b421"
+  integrity sha1-sWZeLEYaLNkvTBu/UNVFTeDUtCE=
+  dependencies:
+    defer-to-connect "^1.0.1"
+
 "@testing-library/dom@^6.15.0":
   version "6.16.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@testing-library/dom/-/dom-6.16.0.tgz#04ada27ed74ad4c0f0d984a1245bb29b1fd90ba9"
@@ -2395,6 +2407,14 @@
   dependencies:
     "@babel/types" "^7.3.0"
 
+"@types/body-parser@*":
+  version "1.19.0"
+  resolved "https://registry.npmjs.org/@types/body-parser/-/body-parser-1.19.0.tgz#0685b3c47eb3006ffed117cdd55164b61f80538f"
+  integrity sha512-W98JrE0j2K78swW4ukqMleo8R7h/pFETjM2DQ90MF6XK2i4LO4W3gQ71Lt4w3bfm2EvVSyWHplECvB5sK22yFQ==
+  dependencies:
+    "@types/connect" "*"
+    "@types/node" "*"
+
 "@types/classnames@^2.2.9":
   version "2.2.10"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/classnames/-/classnames-2.2.10.tgz#cc658ca319b6355399efc1f5b9e818f1a24bf999"
@@ -2404,6 +2424,20 @@
   version "1.1.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha1-HBJhu+qhCoBVu8XYq4S3sq/IRqA=
+
+"@types/connect@*":
+  version "3.4.33"
+  resolved "https://registry.npmjs.org/@types/connect/-/connect-3.4.33.tgz#31610c901eca573b8713c3330abc6e6b9f588546"
+  integrity sha512-2+FrkXY4zllzTNfJth7jOqEHC+enpLeGslEhpnTAkg21GkRrWV4SsAtqchtT4YS9/nODBU2/ZfsBY2X4J/dX7A==
+  dependencies:
+    "@types/node" "*"
+
+"@types/cors@^2.8.6":
+  version "2.8.6"
+  resolved "https://registry.npmjs.org/@types/cors/-/cors-2.8.6.tgz#cfaab33c49c15b1ded32f235111ce9123009bd02"
+  integrity sha512-invOmosX0DqbpA+cE2yoHGUlF/blyf7nB0OGYBBiH27crcVm5NmFaZkLP4Ta1hGaesckCi5lVLlydNJCxkTOSg==
+  dependencies:
+    "@types/express" "*"
 
 "@types/cross-spawn@^6.0.0":
   version "6.0.2"
@@ -2431,6 +2465,25 @@
   version "3.0.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
   integrity sha1-KGLz9Yqaf3w+eNefEw3U1xwlwqc=
+
+"@types/express-serve-static-core@*":
+  version "4.17.7"
+  resolved "https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.17.7.tgz#dfe61f870eb549dc6d7e12050901847c7d7e915b"
+  integrity sha512-EMgTj/DF9qpgLXyc+Btimg+XoH7A2liE8uKul8qSmMTHCeNYzydDKFdsJskDvw42UsesCnhO63dO0Grbj8J4Dw==
+  dependencies:
+    "@types/node" "*"
+    "@types/qs" "*"
+    "@types/range-parser" "*"
+
+"@types/express@*", "@types/express@^4.17.6":
+  version "4.17.6"
+  resolved "https://registry.npmjs.org/@types/express/-/express-4.17.6.tgz#6bce49e49570507b86ea1b07b806f04697fac45e"
+  integrity sha512-n/mr9tZI83kd4azlPG5y997C/M4DNABK9yErhFM6hKdym4kkmd9j0vtsJyjFIwfRBxtrxZtAfGZCNRIBMFLK5w==
+  dependencies:
+    "@types/body-parser" "*"
+    "@types/express-serve-static-core" "*"
+    "@types/qs" "*"
+    "@types/serve-static" "*"
 
 "@types/glob@^7.1.1":
   version "7.1.1"
@@ -2496,6 +2549,11 @@
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/json-schema/-/json-schema-7.0.4.tgz#38fd73ddfd9b55abb1e1b2ed578cb55bd7b7d339"
   integrity sha1-OP1z3f2bVaux4bLtV4y1W9e30zk=
 
+"@types/mime@*":
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/@types/mime/-/mime-2.0.2.tgz#857a118d8634c84bba7ae14088e4508490cd5da5"
+  integrity sha512-4kPlzbljFcsttWEq6aBW0OZe6BDajAmyvr2xknBG92tejQnvdGtT9+kXSZ580DqpxY9qG2xeQVF9Dq0ymUTo5Q==
+
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
@@ -2545,6 +2603,16 @@
   version "1.5.4"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/q/-/q-1.5.4.tgz#15925414e0ad2cd765bfef58842f7e26a7accb24"
   integrity sha1-FZJUFOCtLNdlv+9YhC9+JqesyyQ=
+
+"@types/qs@*":
+  version "6.9.3"
+  resolved "https://registry.npmjs.org/@types/qs/-/qs-6.9.3.tgz#b755a0934564a200d3efdf88546ec93c369abd03"
+  integrity sha512-7s9EQWupR1fTc2pSMtXRQ9w9gLOcrJn+h7HOXw4evxyvVqMi4f+q7d2tnFe3ng3SNHjtK+0EzGMGFUQX4/AQRA==
+
+"@types/range-parser@*":
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/@types/range-parser/-/range-parser-1.2.3.tgz#7ee330ba7caafb98090bece86a5ee44115904c2c"
+  integrity sha512-ewFXqrQHlFsgc09MK5jP5iR7vumV/BYayNC6PgJO2LPe8vrnNFyjQjSppfEngITi0qvfKtzFvgKymGheFM9UOA==
 
 "@types/react-dom@*", "@types/react-dom@^16.8.4":
   version "16.9.8"
@@ -2610,6 +2678,14 @@
   version "0.12.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/@types/retry/-/retry-0.12.0.tgz#2b35eccfcee7d38cd72ad99232fbd58bffb3c84d"
   integrity sha1-KzXsz87n04zXKtmSMvvVi/+zyE0=
+
+"@types/serve-static@*":
+  version "1.13.4"
+  resolved "https://registry.npmjs.org/@types/serve-static/-/serve-static-1.13.4.tgz#6662a93583e5a6cabca1b23592eb91e12fa80e7c"
+  integrity sha512-jTDt0o/YbpNwZbQmE/+2e+lfjJEJJR0I3OFaKQKPWkASkCoW3i6fsUnqudSMcNAfbtmADGu8f4MV4q+GqULmug==
+  dependencies:
+    "@types/express-serve-static-core" "*"
+    "@types/mime" "*"
 
 "@types/sinonjs__fake-timers@6.0.1":
   version "6.0.1"
@@ -3044,6 +3120,13 @@ ansi-align@^2.0.0:
   dependencies:
     string-width "^2.0.0"
 
+ansi-align@^3.0.0:
+  version "3.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/ansi-align/-/ansi-align-3.0.0.tgz#b536b371cf687caaef236c18d3e21fe3797467cb"
+  integrity sha1-tTazcc9ofKrvI2wY0+If43l0Z8s=
+  dependencies:
+    string-width "^3.0.0"
+
 ansi-colors@^3.0.0, ansi-colors@^3.2.1:
   version "3.2.4"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
@@ -3169,6 +3252,11 @@ are-we-there-yet@~1.1.2:
   dependencies:
     delegates "^1.0.0"
     readable-stream "^2.0.6"
+
+arg@^4.1.0:
+  version "4.1.3"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/arg/-/arg-4.1.3.tgz#269fc7ad5b8e42cb63c896d5666017261c144089"
+  integrity sha1-Jp/HrVuOQstjyJbVZmAXJhwUQIk=
 
 argparse@^1.0.7:
   version "1.0.10"
@@ -3685,6 +3773,20 @@ boxen@^1.2.1:
     term-size "^1.2.0"
     widest-line "^2.0.0"
 
+boxen@^4.2.0:
+  version "4.2.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/boxen/-/boxen-4.2.0.tgz#e411b62357d6d6d36587c8ac3d5d974daa070e64"
+  integrity sha1-5BG2I1fW1tNlh8isPV2XTaoHDmQ=
+  dependencies:
+    ansi-align "^3.0.0"
+    camelcase "^5.3.1"
+    chalk "^3.0.0"
+    cli-boxes "^2.2.0"
+    string-width "^4.1.0"
+    term-size "^2.1.0"
+    type-fest "^0.8.1"
+    widest-line "^3.1.0"
+
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -3933,6 +4035,19 @@ cache-base@^1.0.1:
     union-value "^1.0.0"
     unset-value "^1.0.0"
 
+cacheable-request@^6.0.0:
+  version "6.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/cacheable-request/-/cacheable-request-6.1.0.tgz#20ffb8bd162ba4be11e9567d823db651052ca912"
+  integrity sha1-IP+4vRYrpL4R6VZ9gj22UQUsqRI=
+  dependencies:
+    clone-response "^1.0.2"
+    get-stream "^5.1.0"
+    http-cache-semantics "^4.0.0"
+    keyv "^3.0.0"
+    lowercase-keys "^2.0.0"
+    normalize-url "^4.1.0"
+    responselike "^1.0.2"
+
 cachedir@2.2.0:
   version "2.2.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/cachedir/-/cachedir-2.2.0.tgz#19afa4305e05d79e417566882e0c8f960f62ff0e"
@@ -4161,7 +4276,7 @@ chokidar@^2.1.8:
   optionalDependencies:
     fsevents "^1.2.7"
 
-chokidar@^3.3.0, chokidar@^3.3.1, chokidar@^3.4.0:
+chokidar@^3.2.2, chokidar@^3.3.0, chokidar@^3.3.1, chokidar@^3.4.0:
   version "3.4.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/chokidar/-/chokidar-3.4.0.tgz#b30611423ce376357c765b9b8f904b9fba3c0be8"
   integrity sha1-swYRQjzjdjV8dlubj5BLn7o8C+g=
@@ -4249,6 +4364,11 @@ cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
   integrity sha1-T6kXw+WclKAEzWH47lCdplFocUM=
+
+cli-boxes@^2.2.0:
+  version "2.2.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/cli-boxes/-/cli-boxes-2.2.0.tgz#538ecae8f9c6ca508e3c3c95b453fe93cb4c168d"
+  integrity sha1-U47K6PnGylCOPDyVtFP+k8tMFo0=
 
 cli-columns@^3.1.2:
   version "3.1.2"
@@ -4375,6 +4495,13 @@ clone-deep@^4.0.1:
     is-plain-object "^2.0.4"
     kind-of "^6.0.2"
     shallow-clone "^3.0.0"
+
+clone-response@^1.0.2:
+  version "1.0.2"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/clone-response/-/clone-response-1.0.2.tgz#d1dc973920314df67fbeb94223b4ee350239e96b"
+  integrity sha1-0dyXOSAxTfZ/vrlCI7TuNQI56Ws=
+  dependencies:
+    mimic-response "^1.0.0"
 
 clone@^1.0.2:
   version "1.0.4"
@@ -4641,6 +4768,18 @@ configstore@^3.0.0:
     write-file-atomic "^2.0.0"
     xdg-basedir "^3.0.0"
 
+configstore@^5.0.1:
+  version "5.0.1"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/configstore/-/configstore-5.0.1.tgz#d365021b5df4b98cdd187d6a3b0e3f6a7cc5ed96"
+  integrity sha1-02UCG130uYzdGH1qOw4/anzF7ZY=
+  dependencies:
+    dot-prop "^5.2.0"
+    graceful-fs "^4.1.2"
+    make-dir "^3.0.0"
+    unique-string "^2.0.0"
+    write-file-atomic "^3.0.0"
+    xdg-basedir "^4.0.0"
+
 connect-history-api-fallback@^1.6.0:
   version "1.6.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/connect-history-api-fallback/-/connect-history-api-fallback-1.6.0.tgz#8b32089359308d111115d81cad3fceab888f97bc"
@@ -4838,6 +4977,14 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
+
+cors@^2.8.5:
+  version "2.8.5"
+  resolved "https://registry.npmjs.org/cors/-/cors-2.8.5.tgz#eac11da51592dd86b9f06f6e7ac293b3df875d29"
+  integrity sha512-KIHbLJqu73RGr/hnbrO9uBeixNGuvSQjul/jdFvS/KFSIH1hWVd1ng7zOHx+YrEfInLG7q4n6GHQ9cDtxv/P6g==
+  dependencies:
+    object-assign "^4"
+    vary "^1"
 
 cosmiconfig@^5.0.0, cosmiconfig@^5.1.0, cosmiconfig@^5.2.0:
   version "5.2.1"
@@ -5386,7 +5533,7 @@ debug@4, debug@4.1.1, debug@^4.0.0, debug@^4.0.1, debug@^4.1.0, debug@^4.1.1:
   dependencies:
     ms "^2.1.1"
 
-debug@^3.0.0, debug@^3.1.0, debug@^3.1.1, debug@^3.2.5:
+debug@^3.0.0, debug@^3.1.0, debug@^3.1.1, debug@^3.2.5, debug@^3.2.6:
   version "3.2.6"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
   integrity sha1-6D0X3hbYp++3cX7b5fsQE17uYps=
@@ -5420,6 +5567,13 @@ decode-uri-component@^0.2.0:
   version "0.2.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+
+decompress-response@^3.3.0:
+  version "3.3.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/decompress-response/-/decompress-response-3.3.0.tgz#80a4dd323748384bfa248083622aedec982adff3"
+  integrity sha1-gKTdMjdIOEv6JICDYirt7Jgq3/M=
+  dependencies:
+    mimic-response "^1.0.0"
 
 dedent@0.7.0, dedent@^0.7.0:
   version "0.7.0"
@@ -5467,6 +5621,11 @@ defaults@^1.0.3:
   integrity sha1-xlYFHpgX2f8I7YgUd/P+QBnz730=
   dependencies:
     clone "^1.0.2"
+
+defer-to-connect@^1.0.1:
+  version "1.1.3"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/defer-to-connect/-/defer-to-connect-1.1.3.tgz#331ae050c08dcf789f8c83a7b81f0ed94f4ac591"
+  integrity sha1-MxrgUMCNz3ifjIOnuB8O2U9KxZE=
 
 define-properties@^1.1.2, define-properties@^1.1.3:
   version "1.1.3"
@@ -5604,7 +5763,7 @@ diff-sequences@^26.0.0:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/diff-sequences/-/diff-sequences-26.0.0.tgz#0760059a5c287637b842bd7085311db7060e88a6"
   integrity sha1-B2AFmlwodje4Qr1whTEdtwYOiKY=
 
-diff@^4.0.2:
+diff@^4.0.1, diff@^4.0.2:
   version "4.0.2"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha1-YPOuy4nV+uUgwRqhnvwruYKq3n0=
@@ -6017,6 +6176,11 @@ esbuild@^0.3.0:
   version "0.3.6"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/esbuild/-/esbuild-0.3.6.tgz#8e8a67568e1ae232b00a797af7778558d30497c3"
   integrity sha1-jopnVo4a4jKwCnl693eFWNMEl8M=
+
+escape-goat@^2.0.0:
+  version "2.1.1"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/escape-goat/-/escape-goat-2.1.1.tgz#1b2dc77003676c457ec760b2dc68edb648188675"
+  integrity sha1-Gy3HcANnbEV+x2Cy3GjttkgYhnU=
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -7157,7 +7321,7 @@ get-stream@^4.0.0, get-stream@^4.1.0:
   dependencies:
     pump "^3.0.0"
 
-get-stream@^5.0.0:
+get-stream@^5.0.0, get-stream@^5.1.0:
   version "5.1.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/get-stream/-/get-stream-5.1.0.tgz#01203cdc92597f9b909067c3e656cc1f4d3c4dc9"
   integrity sha1-ASA83JJZf5uQkGfD5lbMH008Tck=
@@ -7306,6 +7470,13 @@ global-dirs@^0.1.0, global-dirs@^0.1.1:
   dependencies:
     ini "^1.3.4"
 
+global-dirs@^2.0.1:
+  version "2.0.1"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/global-dirs/-/global-dirs-2.0.1.tgz#acdf3bb6685bcd55cb35e8a052266569e9469201"
+  integrity sha1-rN87tmhbzVXLNeigUiZlaelGkgE=
+  dependencies:
+    ini "^1.3.5"
+
 global-modules@2.0.0:
   version "2.0.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/global-modules/-/global-modules-2.0.0.tgz#997605ad2345f27f51539bea26574421215c7780"
@@ -7448,6 +7619,23 @@ got@^6.7.1:
     unzip-response "^2.0.1"
     url-parse-lax "^1.0.0"
 
+got@^9.6.0:
+  version "9.6.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/got/-/got-9.6.0.tgz#edf45e7d67f99545705de1f7bbeeeb121765ed85"
+  integrity sha1-7fRefWf5lUVwXeH3u+7rEhdl7YU=
+  dependencies:
+    "@sindresorhus/is" "^0.14.0"
+    "@szmarczak/http-timer" "^1.1.2"
+    cacheable-request "^6.0.0"
+    decompress-response "^3.3.0"
+    duplexer3 "^0.1.4"
+    get-stream "^4.1.0"
+    lowercase-keys "^1.0.1"
+    mimic-response "^1.0.1"
+    p-cancelable "^1.0.0"
+    to-readable-stream "^1.0.0"
+    url-parse-lax "^3.0.0"
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.3, graceful-fs@^4.1.6, graceful-fs@^4.2.0, graceful-fs@^4.2.2, graceful-fs@^4.2.4:
   version "4.2.4"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
@@ -7568,6 +7756,11 @@ has-values@^1.0.0:
   dependencies:
     is-number "^3.0.0"
     kind-of "^4.0.0"
+
+has-yarn@^2.1.0:
+  version "2.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/has-yarn/-/has-yarn-2.1.0.tgz#137e11354a7b5bf11aa5cb649cf0c6f3ff2b2e77"
+  integrity sha1-E34RNUp7W/EapctknPDG8/8rLnc=
 
 has@^1.0.0, has@^1.0.3:
   version "1.0.3"
@@ -7772,6 +7965,11 @@ http-cache-semantics@^3.8.1:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/http-cache-semantics/-/http-cache-semantics-3.8.1.tgz#39b0e16add9b605bf0a9ef3d9daaf4843b4cacd2"
   integrity sha1-ObDhat2bYFvwqe89nar0hDtMrNI=
 
+http-cache-semantics@^4.0.0:
+  version "4.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/http-cache-semantics/-/http-cache-semantics-4.1.0.tgz#49e91c5cbf36c9b94bcfcd71c23d5249ec74e390"
+  integrity sha1-SekcXL82yblLz81xwj1SSex045A=
+
 http-deceiver@^1.2.7:
   version "1.2.7"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/http-deceiver/-/http-deceiver-1.2.7.tgz#fa7168944ab9a519d337cb0bec7284dc3e723d87"
@@ -7937,6 +8135,11 @@ iferr@^1.0.2:
   version "1.0.2"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/iferr/-/iferr-1.0.2.tgz#e9fde49a9da06dc4a4194c6c9ed6d08305037a6d"
   integrity sha1-6f3kmp2gbcSkGUxsntbQgwUDem0=
+
+ignore-by-default@^1.0.1:
+  version "1.0.1"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/ignore-by-default/-/ignore-by-default-1.0.1.tgz#48ca6d72f6c6a3af00a9ad4ae6876be3889e2b09"
+  integrity sha1-SMptcvbGo68Aqa1K5odr44ieKwk=
 
 ignore-walk@^3.0.1:
   version "3.0.3"
@@ -8475,6 +8678,14 @@ is-installed-globally@0.1.0, is-installed-globally@^0.1.0:
     global-dirs "^0.1.0"
     is-path-inside "^1.0.0"
 
+is-installed-globally@^0.3.1:
+  version "0.3.2"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/is-installed-globally/-/is-installed-globally-0.3.2.tgz#fd3efa79ee670d1187233182d5b0a1dd00313141"
+  integrity sha1-/T76ee5nDRGHIzGC1bCh3QAxMUE=
+  dependencies:
+    global-dirs "^2.0.1"
+    is-path-inside "^3.0.1"
+
 is-interactive@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/is-interactive/-/is-interactive-1.0.0.tgz#cea6e6ae5c870a7b0a0004070b7b587e0252912e"
@@ -8489,6 +8700,11 @@ is-npm@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/is-npm/-/is-npm-1.0.0.tgz#f2fb63a65e4905b406c86072765a1a4dc793b9f4"
   integrity sha1-8vtjpl5JBbQGyGBydloaTceTufQ=
+
+is-npm@^4.0.0:
+  version "4.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/is-npm/-/is-npm-4.0.0.tgz#c90dd8380696df87a7a6d823c20d0b12bbe3c84d"
+  integrity sha1-yQ3YOAaW34enptgjwg0LErvjyE0=
 
 is-number@^3.0.0:
   version "3.0.0"
@@ -8544,6 +8760,11 @@ is-path-inside@^2.1.0:
   integrity sha1-fJgQWH1lmkDSe8201WFuqwWUlLI=
   dependencies:
     path-is-inside "^1.0.2"
+
+is-path-inside@^3.0.1:
+  version "3.0.2"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/is-path-inside/-/is-path-inside-3.0.2.tgz#f5220fc82a3e233757291dddc9c5877f2a1f3017"
+  integrity sha1-9SIPyCo+IzdXKR3dycWHfyofMBc=
 
 is-plain-obj@^1.0.0, is-plain-obj@^1.1.0:
   version "1.1.0"
@@ -8682,6 +8903,11 @@ is-wsl@^2.1.1:
   integrity sha1-dKTHbnfKn9P5MvKQwX6jJs0VcnE=
   dependencies:
     is-docker "^2.0.0"
+
+is-yarn-global@^0.3.0:
+  version "0.3.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/is-yarn-global/-/is-yarn-global-0.3.0.tgz#d502d3382590ea3004893746754c89139973e232"
+  integrity sha1-1QLTOCWQ6jAEiTdGdUyJE5lz4jI=
 
 isarray@0.0.1:
   version "0.0.1"
@@ -9649,6 +9875,11 @@ jsesc@~0.5.0:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/jsesc/-/jsesc-0.5.0.tgz#e7dee66e35d6fc16f710fe91d5cf69f70f08911d"
   integrity sha1-597mbjXW/Bb3EP6R1c9p9w8IkR0=
 
+json-buffer@3.0.0:
+  version "3.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/json-buffer/-/json-buffer-3.0.0.tgz#5b1f397afc75d677bde8bcfc0e47e1f9a3d9a898"
+  integrity sha1-Wx85evx11ne96Lz8Dkfh+aPZqJg=
+
 json-parse-better-errors@^1.0.0, json-parse-better-errors@^1.0.1, json-parse-better-errors@^1.0.2:
   version "1.0.2"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz#bb867cfb3450e69107c131d1c514bab3dc8bcaa9"
@@ -9806,6 +10037,13 @@ jsx-ast-utils@^2.2.1, jsx-ast-utils@^2.2.3:
     array-includes "^3.0.3"
     object.assign "^4.1.0"
 
+keyv@^3.0.0:
+  version "3.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/keyv/-/keyv-3.1.0.tgz#ecc228486f69991e49e9476485a5be1e8fc5c4d9"
+  integrity sha1-7MIoSG9pmR5J6UdkhaW+Ho/FxNk=
+  dependencies:
+    json-buffer "3.0.0"
+
 killable@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -9853,6 +10091,13 @@ latest-version@^3.0.0:
   integrity sha1-ogU4P+oyKzO1rjsYq+4NwvNW7hU=
   dependencies:
     package-json "^4.0.0"
+
+latest-version@^5.0.0:
+  version "5.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/latest-version/-/latest-version-5.1.0.tgz#119dfe908fe38d15dfa43ecd13fa12ec8832face"
+  integrity sha1-EZ3+kI/jjRXfpD7NE/oS7Igy+s4=
+  dependencies:
+    package-json "^6.3.0"
 
 lazy-ass@1.6.0:
   version "1.6.0"
@@ -10470,10 +10715,15 @@ lower-case@^1.1.1:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/lower-case/-/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
   integrity sha1-miyr0bno4K6ZOkv31YdcOcQujqw=
 
-lowercase-keys@^1.0.0:
+lowercase-keys@^1.0.0, lowercase-keys@^1.0.1:
   version "1.0.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/lowercase-keys/-/lowercase-keys-1.0.1.tgz#6f9e30b47084d971a7c820ff15a6c5167b74c26f"
   integrity sha1-b54wtHCE2XGnyCD/FabFFnt0wm8=
+
+lowercase-keys@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/lowercase-keys/-/lowercase-keys-2.0.0.tgz#2603e78b7b4b0006cbca2fbcc8a3202558ac9479"
+  integrity sha1-JgPni3tLAAbLyi+8yKMgJVislHk=
 
 lowlight@1.12.1:
   version "1.12.1"
@@ -10532,7 +10782,7 @@ make-dir@^3.0.0, make-dir@^3.0.2:
   dependencies:
     semver "^6.0.0"
 
-make-error@1.x:
+make-error@1.x, make-error@^1.1.1:
   version "1.3.6"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/make-error/-/make-error-1.3.6.tgz#2eb2e37ea9b67c4891f684a1394799af484cf7a2"
   integrity sha1-LrLjfqm2fEiR9oShOUeZr0hM96I=
@@ -10860,6 +11110,11 @@ mimic-fn@^2.0.0, mimic-fn@^2.1.0:
   version "2.1.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha1-ftLCzMyvhNP/y3pptXcR/CCDQBs=
+
+mimic-response@^1.0.0, mimic-response@^1.0.1:
+  version "1.0.1"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"
+  integrity sha1-SSNTiHju9CBjy4o+OweYeBSHqxs=
 
 min-document@^2.19.0:
   version "2.19.0"
@@ -11260,6 +11515,22 @@ node-releases@^1.1.52, node-releases@^1.1.53:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/node-releases/-/node-releases-1.1.56.tgz#bc054a417d316e3adac90eafb7e1932802f28705"
   integrity sha1-vAVKQX0xbjrayQ6vt+GTKALyhwU=
 
+nodemon@^2.0.2:
+  version "2.0.4"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/nodemon/-/nodemon-2.0.4.tgz#55b09319eb488d6394aa9818148c0c2d1c04c416"
+  integrity sha1-VbCTGetIjWOUqpgYFIwMLRwExBY=
+  dependencies:
+    chokidar "^3.2.2"
+    debug "^3.2.6"
+    ignore-by-default "^1.0.1"
+    minimatch "^3.0.4"
+    pstree.remy "^1.1.7"
+    semver "^5.7.1"
+    supports-color "^5.5.0"
+    touch "^3.1.0"
+    undefsafe "^2.0.2"
+    update-notifier "^4.0.0"
+
 nopt@^4.0.1, nopt@^4.0.3:
   version "4.0.3"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/nopt/-/nopt-4.0.3.tgz#a375cad9d02fd921278d954c2254d5aa57e15e48"
@@ -11267,6 +11538,13 @@ nopt@^4.0.1, nopt@^4.0.3:
   dependencies:
     abbrev "1"
     osenv "^0.1.4"
+
+nopt@~1.0.10:
+  version "1.0.10"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/nopt/-/nopt-1.0.10.tgz#6ddd21bd2a31417b92727dd585f8a6f37608ebee"
+  integrity sha1-bd0hvSoxQXuScn3Vhfim83YI6+4=
+  dependencies:
+    abbrev "1"
 
 normalize-package-data@^2.0.0, normalize-package-data@^2.3.0, normalize-package-data@^2.3.2, normalize-package-data@^2.3.4, normalize-package-data@^2.3.5, normalize-package-data@^2.4.0, normalize-package-data@^2.5.0:
   version "2.5.0"
@@ -11304,6 +11582,11 @@ normalize-url@^3.0.0, normalize-url@^3.3.0:
   version "3.3.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha1-suHE3E98bVd0PfczpPWXjRhlBVk=
+
+normalize-url@^4.1.0:
+  version "4.5.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
+  integrity sha1-RTNUCH5sqWlXvY9br3U/WYIUISk=
 
 normalize-url@^5.0.0:
   version "5.0.0"
@@ -11583,7 +11866,7 @@ oauth-sign@~0.9.0:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha1-R6ewFrqmi1+g7PPe4IqFxnmsZFU=
 
-object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
+object-assign@^4, object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
@@ -11831,6 +12114,11 @@ ospath@1.2.2:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/ospath/-/ospath-1.2.2.tgz#1276639774a3f8ef2572f7fe4280e0ea4550c07b"
   integrity sha1-EnZjl3Sj+O8lcvf+QoDg6kVQwHs=
 
+p-cancelable@^1.0.0:
+  version "1.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/p-cancelable/-/p-cancelable-1.1.0.tgz#d078d15a3af409220c886f1d9a0ca2e441ab26cc"
+  integrity sha1-0HjRWjr0CSIMiG8dmgyi5EGrJsw=
+
 p-defer@^1.0.0:
   version "1.0.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/p-defer/-/p-defer-1.0.0.tgz#9f6eb182f6c9aa8cd743004a7d4f96b196b0fb0c"
@@ -12000,6 +12288,16 @@ package-json@^4.0.0:
     registry-auth-token "^3.0.1"
     registry-url "^3.0.3"
     semver "^5.1.0"
+
+package-json@^6.3.0:
+  version "6.5.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/package-json/-/package-json-6.5.0.tgz#6feedaca35e75725876d0b0e64974697fed145b0"
+  integrity sha1-b+7ayjXnVyWHbQsOZJdGl/7RRbA=
+  dependencies:
+    got "^9.6.0"
+    registry-auth-token "^4.0.0"
+    registry-url "^5.0.0"
+    semver "^6.2.0"
 
 pacote@^9.1.0, pacote@^9.5.12, pacote@^9.5.3:
   version "9.5.12"
@@ -12825,6 +13123,11 @@ prepend-http@^1.0.0, prepend-http@^1.0.1:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
 
+prepend-http@^2.0.0:
+  version "2.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
+  integrity sha1-6SQ0v6XqjBn0HN/UAddBo8gZ2Jc=
+
 prettier@^1.18.2, prettier@^1.19.1:
   version "1.19.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/prettier/-/prettier-1.19.1.tgz#f7d7f5ff8a9cd872a7be4ca142095956a60797cb"
@@ -13003,6 +13306,11 @@ psl@^1.1.28:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/psl/-/psl-1.8.0.tgz#9326f8bcfb013adcc005fdff056acce020e51c24"
   integrity sha1-kyb4vPsBOtzABf3/BWrM4CDlHCQ=
 
+pstree.remy@^1.1.7:
+  version "1.1.8"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/pstree.remy/-/pstree.remy-1.1.8.tgz#c242224f4a67c21f686839bbdb4ac282b8373d3a"
+  integrity sha1-wkIiT0pnwh9oaDm720rCgrg3PTo=
+
 public-encrypt@^4.0.0:
   version "4.0.3"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/public-encrypt/-/public-encrypt-4.0.3.tgz#4fcc9d77a07e48ba7527e7cbe0de33d0701331e0"
@@ -13054,6 +13362,13 @@ punycode@^2.1.0, punycode@^2.1.1:
   version "2.1.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha1-tYsBCsQMIsVldhbI0sLALHv0eew=
+
+pupa@^2.0.1:
+  version "2.0.1"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/pupa/-/pupa-2.0.1.tgz#dbdc9ff48ffbea4a26a069b6f9f7abb051008726"
+  integrity sha1-29yf9I/76komoGm2+fersFEAhyY=
+  dependencies:
+    escape-goat "^2.0.0"
 
 q@^1.1.2, q@^1.5.1:
   version "1.5.1"
@@ -13730,6 +14045,13 @@ registry-url@^3.0.3:
   dependencies:
     rc "^1.0.1"
 
+registry-url@^5.0.0:
+  version "5.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/registry-url/-/registry-url-5.1.0.tgz#e98334b50d5434b81136b44ec638d9c2009c5009"
+  integrity sha1-6YM0tQ1UNLgRNrROxjjZwgCcUAk=
+  dependencies:
+    rc "^1.2.8"
+
 regjsgen@^0.5.1:
   version "0.5.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/regjsgen/-/regjsgen-0.5.1.tgz#48f0bf1a5ea205196929c0d9798b42d1ed98443c"
@@ -13935,6 +14257,13 @@ resolve@1.x, resolve@^1.10.0, resolve@^1.11.0, resolve@^1.12.0, resolve@^1.13.1,
   integrity sha1-sllBtUloIxzC0bt2p5y38sC/hEQ=
   dependencies:
     path-parse "^1.0.6"
+
+responselike@^1.0.2:
+  version "1.0.2"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/responselike/-/responselike-1.0.2.tgz#918720ef3b631c5642be068f15ade5a46f4ba1e7"
+  integrity sha1-kYcg7ztjHFZCvgaPFa3lpG9Loec=
+  dependencies:
+    lowercase-keys "^1.0.0"
 
 restore-cursor@^1.0.1:
   version "1.0.1"
@@ -14676,7 +15005,7 @@ source-map-resolve@^0.5.0, source-map-resolve@^0.5.2:
     source-map-url "^0.4.0"
     urix "^0.1.0"
 
-source-map-support@^0.5.6, source-map-support@~0.5.12:
+source-map-support@^0.5.17, source-map-support@^0.5.6, source-map-support@~0.5.12:
   version "0.5.19"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/source-map-support/-/source-map-support-0.5.19.tgz#a98b62f86dcaf4f67399648c085291ab9e8fed61"
   integrity sha1-qYti+G3K9PZzmWSMCFKRq56P7WE=
@@ -15034,7 +15363,7 @@ string-width@^3.0.0, string-width@^3.1.0:
     is-fullwidth-code-point "^2.0.0"
     strip-ansi "^5.1.0"
 
-string-width@^4.1.0, string-width@^4.2.0:
+string-width@^4.0.0, string-width@^4.1.0, string-width@^4.2.0:
   version "4.2.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/string-width/-/string-width-4.2.0.tgz#952182c46cc7b2c313d1596e623992bd163b72b5"
   integrity sha1-lSGCxGzHssMT0VluYjmSvRY7crU=
@@ -15278,7 +15607,7 @@ supports-color@^3.2.3:
   dependencies:
     has-flag "^1.0.0"
 
-supports-color@^5.3.0, supports-color@^5.4.0:
+supports-color@^5.3.0, supports-color@^5.4.0, supports-color@^5.5.0:
   version "5.5.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/supports-color/-/supports-color-5.5.0.tgz#e2e69a44ac8772f78a1ec0b35b689df6530efc8f"
   integrity sha1-4uaaRKyHcveKHsCzW2id9lMO/I8=
@@ -15407,6 +15736,11 @@ term-size@^1.2.0:
   integrity sha1-RYuDiH8oj8Vtb/+/rSYuJmOO+mk=
   dependencies:
     execa "^0.7.0"
+
+term-size@^2.1.0:
+  version "2.2.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/term-size/-/term-size-2.2.0.tgz#1f16adedfe9bdc18800e1776821734086fcc6753"
+  integrity sha1-Hxat7f6b3BiADhd2ghc0CG/MZ1M=
 
 terminal-link@^2.0.0:
   version "2.1.1"
@@ -15586,6 +15920,11 @@ to-object-path@^0.3.0:
   dependencies:
     kind-of "^3.0.2"
 
+to-readable-stream@^1.0.0:
+  version "1.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/to-readable-stream/-/to-readable-stream-1.0.0.tgz#ce0aa0c2f3df6adf852efb404a783e77c0475771"
+  integrity sha1-zgqgwvPfat+FLvtASng+d8BHV3E=
+
 to-regex-range@^2.1.0:
   version "2.1.1"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/to-regex-range/-/to-regex-range-2.1.1.tgz#7c80c17b9dfebe599e27367e0d4dd5590141db38"
@@ -15625,6 +15964,13 @@ toposort@^1.0.0:
   version "1.0.7"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/toposort/-/toposort-1.0.7.tgz#2e68442d9f64ec720b8cc89e6443ac6caa950029"
   integrity sha1-LmhELZ9k7HILjMieZEOsbKqVACk=
+
+touch@^3.1.0:
+  version "3.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/touch/-/touch-3.1.0.tgz#fe365f5f75ec9ed4e56825e0bb76d24ab74af83b"
+  integrity sha1-/jZfX3XsntTlaCXgu3bSSrdK+Ds=
+  dependencies:
+    nopt "~1.0.10"
 
 tough-cookie@^2.3.3, tough-cookie@~2.5.0:
   version "2.5.0"
@@ -15739,6 +16085,17 @@ ts-loader@^7.0.4:
     loader-utils "^1.0.2"
     micromatch "^4.0.0"
     semver "^6.0.0"
+
+ts-node@^8.6.2:
+  version "8.10.1"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/ts-node/-/ts-node-8.10.1.tgz#77da0366ff8afbe733596361d2df9a60fc9c9bd3"
+  integrity sha1-d9oDZv+K++czWWNh0t+aYPycm9M=
+  dependencies:
+    arg "^4.1.0"
+    diff "^4.0.1"
+    make-error "^1.1.1"
+    source-map-support "^0.5.17"
+    yn "3.1.1"
 
 tslib@1.10.0:
   version "1.10.0"
@@ -15865,6 +16222,13 @@ umask@^1.1.0, umask@~1.1.0:
   version "1.1.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/umask/-/umask-1.1.0.tgz#f29cebf01df517912bb58ff9c4e50fde8e33320d"
   integrity sha1-8pzr8B31F5ErtY/5xOUP3o4zMg0=
+
+undefsafe@^2.0.2:
+  version "2.0.3"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/undefsafe/-/undefsafe-2.0.3.tgz#6b166e7094ad46313b2202da7ecc2cd7cc6e7aae"
+  integrity sha1-axZucJStRjE7IgLafsws18xueq4=
+  dependencies:
+    debug "^2.2.0"
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -16010,6 +16374,25 @@ update-notifier@^2.2.0, update-notifier@^2.3.0, update-notifier@^2.5.0:
     semver-diff "^2.0.0"
     xdg-basedir "^3.0.0"
 
+update-notifier@^4.0.0:
+  version "4.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/update-notifier/-/update-notifier-4.1.0.tgz#4866b98c3bc5b5473c020b1250583628f9a328f3"
+  integrity sha1-SGa5jDvFtUc8AgsSUFg2KPmjKPM=
+  dependencies:
+    boxen "^4.2.0"
+    chalk "^3.0.0"
+    configstore "^5.0.1"
+    has-yarn "^2.1.0"
+    import-lazy "^2.1.0"
+    is-ci "^2.0.0"
+    is-installed-globally "^0.3.1"
+    is-npm "^4.0.0"
+    is-yarn-global "^0.3.0"
+    latest-version "^5.0.0"
+    pupa "^2.0.1"
+    semver-diff "^3.1.1"
+    xdg-basedir "^4.0.0"
+
 upper-case@^1.1.1:
   version "1.1.3"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/upper-case/-/upper-case-1.1.3.tgz#f6b4501c2ec4cdd26ba78be7222961de77621598"
@@ -16047,6 +16430,13 @@ url-parse-lax@^1.0.0:
   integrity sha1-evjzA2Rem9eaJy56FKxovAYJ2nM=
   dependencies:
     prepend-http "^1.0.1"
+
+url-parse-lax@^3.0.0:
+  version "3.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/url-parse-lax/-/url-parse-lax-3.0.0.tgz#16b5cafc07dbe3676c1b1999177823d6503acb0c"
+  integrity sha1-FrXK/Afb42dsGxmZF3gj1lA6yww=
+  dependencies:
+    prepend-http "^2.0.0"
 
 url-parse@^1.4.3:
   version "1.4.7"
@@ -16177,7 +16567,7 @@ value-equal@^1.0.1:
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/value-equal/-/value-equal-1.0.1.tgz#1e0b794c734c5c0cade179c437d356d931a34d6c"
   integrity sha1-Hgt5THNMXAyt4XnEN9NW2TGjTWw=
 
-vary@~1.1.2:
+vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
@@ -16479,6 +16869,13 @@ widest-line@^2.0.0:
   dependencies:
     string-width "^2.1.1"
 
+widest-line@^3.1.0:
+  version "3.1.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/widest-line/-/widest-line-3.1.0.tgz#8292333bbf66cb45ff0de1603b136b7ae1496eca"
+  integrity sha1-gpIzO79my0X/DeFgOxNreuFJbso=
+  dependencies:
+    string-width "^4.0.0"
+
 windows-release@^3.1.0:
   version "3.3.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/windows-release/-/windows-release-3.3.0.tgz#dce167e9f8be733f21c849ebd4d03fe66b29b9f0"
@@ -16623,6 +17020,11 @@ xdg-basedir@^3.0.0:
   version "3.0.0"
   resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/xdg-basedir/-/xdg-basedir-3.0.0.tgz#496b2cc109eca8dbacfe2dc72b603c17c5870ad4"
   integrity sha1-SWsswQnsqNus/i3HK2A8F8WHCtQ=
+
+xdg-basedir@^4.0.0:
+  version "4.0.0"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/xdg-basedir/-/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
+  integrity sha1-S8jZmEQDaWIl74OhVzy7y0552xM=
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
@@ -16836,6 +17238,11 @@ yml-loader@^2.1.0:
   dependencies:
     js-yaml "^3.8.3"
     loader-utils "^1.1.0"
+
+yn@3.1.1:
+  version "3.1.1"
+  resolved "https://artifactory.spotify.net/artifactory/api/npm/virtual-npm/yn/-/yn-3.1.1.tgz#1e87401a09d767c1d5eab26a6e4c185182d2eb50"
+  integrity sha1-HodAGgnXZ8HV6rJqbkwYUYLS61A=
 
 yn@^4.0.0:
   version "4.0.0"
