@@ -9,6 +9,7 @@ import React, { FC } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import * as plugins from './plugins';
 import AlertDisplay from './components/AlertDisplay';
+import { secureContextApiRef, SecureContextPrompt } from 'secure-context';
 
 const useStyles = makeStyles(theme => ({
   '@global': {
@@ -31,6 +32,7 @@ const useStyles = makeStyles(theme => ({
 const apisBuilder = ApiRegistry.builder();
 
 const forwarder = apisBuilder.add(alertApiRef, new AlertApiForwarder());
+apisBuilder.add(secureContextApiRef, new SecureContextPrompt());
 
 const apis = apisBuilder.build();
 
