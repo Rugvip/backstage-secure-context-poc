@@ -12,7 +12,7 @@ import {
   alertApiRef,
 } from '@backstage/core';
 import { secureContextApiRef } from 'secure-context';
-import secureVaultItem from '../../../secure/vault-item.json';
+import * as secureVaultItem from '../../../secure/vault-item';
 
 const WelcomePage: FC<{}> = () => {
   const alertApi = useApi(alertApiRef);
