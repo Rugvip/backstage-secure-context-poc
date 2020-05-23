@@ -55,7 +55,17 @@ export async function secureContextServer(options: Options) {
     const actions = await Promise.all(
       actionNames.map(filePath => readAction(secureActionsDir, filePath)),
     );
-    console.log('DEBUG: actions =', actions);
+
+    for (const action of actions) {
+      console.log(`Adding ${action.id}`);
+      router.get(`/${action.id}/action.html`, (_, res) => {
+        console.log('DEBUG: action =', action);
+        res.render('secure-context', action);
+      });
+      router.get(`/${action.id}/action.js`, (_, res) => {
+        res.send(action.code);
+      });
+    }
   }
 
   return router;

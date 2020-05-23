@@ -1,13 +1,23 @@
 import cors from 'cors';
 import express from 'express';
+import { resolve as resolvePath } from 'path';
 import { secureContextServer } from './server';
+import mustacheExpress from 'mustache-express';
 
 export async function main() {
   const app = express();
 
-  app.use(cors());
+  app.engine('mst', mustacheExpress());
+  app.set('view engine', 'mst');
+  app.set('views', resolvePath(__dirname, '../views'));
 
+  app.use(cors());
+  app.use((req, _res, next) => {
+    console.log(req.url);
+    next();
+  });
   app.use(
+    '/actions',
     await secureContextServer({
       plugins: ['plugin-welcome'],
     }),
