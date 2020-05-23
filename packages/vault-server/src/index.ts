@@ -1,35 +1,50 @@
 import cors from 'cors';
 import express from 'express';
 
-// We could rely on CORS for this check, but we might be deployed
-// on the same domain as the frontend, and then it wouldn't work.
-function createSecureOriginMiddleware(secureOrigin: string) {
-  const middleware: express.Handler = (req, _res, next) => {
-    const { origin } = req.headers;
-    console.log(`Request from ${origin}`);
+function createSecureActionMiddleware(secureOrigin: string) {
+  const createMiddleware = (allowedActions: string[]) => {
+    const middleware: express.Handler = (req, _res, next) => {
+      const { origin, referer = '' } = req.headers;
+      console.log(`Request from ${origin}`);
 
-    if (origin !== secureOrigin) {
-      const error = new Error(`Request not allowed from origin ${origin}`);
-      error.name = 'NotAllowedError';
-      (error as any).status = 403;
-      next(error);
-    } else {
+      if (origin !== secureOrigin) {
+        next(new Error(`Request not allowed from origin ${origin}`));
+        return;
+      }
+
+      const actionMatch = referer.match(/\/([^/]+)\.html$/);
+      if (!actionMatch) {
+        next(
+          new Error(`Failed to read secure action ID in referrer '${referer}'`),
+        );
+        return;
+      }
+
+      const action = actionMatch[1];
+      if (!allowedActions.includes(action)) {
+        next(new Error(`Action '${action}' is not allowed`));
+        return;
+      }
+
+      console.log(`Allowed secure action '${action}'`);
       next();
-    }
+    };
+    return middleware;
   };
-  return middleware;
+
+  return createMiddleware;
 }
 
 export async function main() {
   const app = express();
 
-  const secureOrigin = createSecureOriginMiddleware(
+  const secureAction = createSecureActionMiddleware(
     process.env.SECURE_ORIGIN || 'http://localhost:3001',
   );
 
   app.use(cors());
 
-  app.get('/vault/:item', secureOrigin, (req, res) => {
+  app.get('/vault/:item', secureAction(['vault-item']), (req, res) => {
     res.send({
       secretItem: {
         name: req.params.item,

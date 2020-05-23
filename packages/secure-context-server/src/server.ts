@@ -58,7 +58,7 @@ export async function secureContextServer(options: Options) {
 
     for (const action of actions) {
       console.log(`Adding ${action.id}`);
-      router.get(`/${action.id}/action.html`, (_, res) => {
+      router.get(`/${action.id}.html`, (_, res) => {
         res.render('secure-context', {
           action,
           appOrigin: 'http://localhost:3000',

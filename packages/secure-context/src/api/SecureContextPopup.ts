@@ -16,7 +16,7 @@ export class SecureContextPopup implements SecureContextApi {
     action: SecureAction<Req, Res>,
     data: Req,
   ): Promise<Res> {
-    const url = `${this.options.secureOrigin}/actions/${action.id}/action.html`;
+    const url = `${this.options.secureOrigin}/actions/${action.id}.html`;
 
     const width = this.options.width || DEFAULT_WIDTH;
     const height = this.options.height || DEFAULT_HEIGHT;
