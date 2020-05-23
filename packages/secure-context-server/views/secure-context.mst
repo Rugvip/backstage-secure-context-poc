@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
+    <title>{{ action.title }}</title>
   </head>
   <body>
     <main class="ActionForm">
-      <h1 class="ActionTitle">{{ title }}</h1>
-      <p class="ActionBody">Waiting for data ...</p>
+      <h1 class="ActionTitle">{{ action.title }}</h1>
+      <p class="ActionBody">...</p>
       <div class="Buttons">
         <button class="Button--confirm">Confirm</button>
         <button class="Button--reject">Reject</button>
@@ -16,13 +16,12 @@
     </main>
 
     <script>
-      var exports = {};
-    </script>
-    <script src="action.js"></script>
-    <script>
-      (() => {
-        const action = exports;
+      var globalSecureContextAction = {};
+      ((exports) => {
+        {{{action.code}}}
+      })(globalSecureContextAction);
 
+      ((action) => {
         const bodyEl = document.querySelector('.ActionBody');
         const confirmButtonEl = document.querySelector('.Button--confirm');
         const rejectButtonEl = document.querySelector('.Button--reject');
@@ -46,7 +45,7 @@
             type: 'secure-context-response',
             result,
             payload,
-          });
+          }, '{{{appOrigin}}}');
           window.close();
         }
 
@@ -93,7 +92,7 @@
             showPrompt(data.payload);
           }
         });
-      })();
+      })(globalSecureContextAction);
     </script>
   </body>
 </html>
