@@ -22,7 +22,77 @@
     <script>
       (() => {
         const action = exports;
-        console.log('DEBUG: action =', action);
+
+        const bodyEl = document.querySelector('.ActionBody');
+        const confirmButtonEl = document.querySelector('.Button--confirm');
+        const rejectButtonEl = document.querySelector('.Button--reject');
+
+        function template(str, data) {
+          const lookupByPath = ([first, ...rest], d) => {
+            if (!first || !d) {
+              return d;
+            }
+            return lookupByPath(rest, d[first]);
+          };
+
+          return str.replace(/\{\{(.*?)\}\}/, (_, path) => {
+            return lookupByPath(path.trim().split('.'), data);
+          });
+        }
+
+        function sendResult(result, payload) {
+          console.log('Sending Result');
+          (window.opener || window.parent).postMessage({
+            type: 'secure-context-response',
+            result,
+            payload,
+          });
+          window.close();
+        }
+
+        let responded = false;
+        async function handleResponse(confirmed, data) {
+          console.log(
+            `User ${confirmed ? 'confirmed' : 'rejected'} the request`,
+          );
+          if (responded) {
+            return;
+          }
+          responded = true;
+          confirmButtonEl.disabled = true;
+          rejectButtonEl.disabled = true;
+
+          if (!confirmed) {
+            sendResult('rejected', {});
+            return;
+          }
+
+          try {
+            const response = await action.handler(data);
+            sendResult('response', response);
+          } catch (error) {
+            sendResult('error', error);
+          }
+        }
+
+        function showPrompt(data) {
+          const body = template(action.body, data);
+          bodyEl.textContent = body;
+          confirmButtonEl.onclick = () => handleResponse(true, data);
+          rejectButtonEl.onclick = () => handleResponse(false, data);
+        }
+
+        let receivedData = false;
+        window.addEventListener('message', event => {
+          if (receivedData) {
+            return;
+          }
+          const { data } = event;
+          if (data.type === 'secure-context-data') {
+            receivedData = true;
+            showPrompt(data.payload);
+          }
+        });
       })();
     </script>
   </body>
