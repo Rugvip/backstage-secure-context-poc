@@ -92,6 +92,10 @@
             showPrompt(data.payload);
           }
         });
+
+        (window.opener || window.parent).postMessage({
+          type: 'secure-context-ready',
+        }, '{{{appOrigin}}}');
       })(globalSecureContextAction);
     </script>
   </body>
