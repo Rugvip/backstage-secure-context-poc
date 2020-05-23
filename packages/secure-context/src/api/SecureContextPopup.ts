@@ -20,8 +20,8 @@ export class SecureContextPopup implements SecureContextApi {
 
     const width = this.options.width || DEFAULT_WIDTH;
     const height = this.options.height || DEFAULT_HEIGHT;
-    const left = window.screen.width / 2 - width / 2;
-    const top = window.screen.height / 2 - height / 2;
+    const left = window.screenLeft + window.outerWidth / 2 - width / 2;
+    const top = window.screenTop + window.outerHeight / 2 - height / 2;
     const windowOptions = `menubar=no,location=no,resizable=no,scrollbars=no,status=no,width=${width},height=${height},top=${top},left=${left}`;
 
     return new Promise((resolve, reject) => {
