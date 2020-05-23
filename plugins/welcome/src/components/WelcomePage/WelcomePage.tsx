@@ -21,9 +21,8 @@ const WelcomePage: FC<{}> = () => {
   const handleClick = async () => {
     try {
       const monaLisa = await secureContextApi.execute(secureVaultItem, {
-        item: {
-          name: 'mona-lisa',
-        },
+        item: 'mona-lisa',
+        apiOrigin: 'http://localhost:3002',
       });
       // eslint-disable-next-line no-console
       console.log('We got the Mona Lista!', monaLisa);
