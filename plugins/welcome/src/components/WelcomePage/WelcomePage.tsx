@@ -12,7 +12,7 @@ import {
   alertApiRef,
 } from '@backstage/core';
 import { secureContextApiRef } from 'secure-context';
-import * as secureVaultItem from '../../../secure/vault-item';
+import * as deleteVaultItem from '../../.../../../secure/delete-vault-item';
 
 const WelcomePage: FC<{}> = () => {
   const alertApi = useApi(alertApiRef);
@@ -20,12 +20,12 @@ const WelcomePage: FC<{}> = () => {
 
   const handleClick = async () => {
     try {
-      const monaLisa = await secureContextApi.execute(secureVaultItem, {
-        item: 'mona-lisa',
+      const monaLisa = await secureContextApi.execute(deleteVaultItem, {
+        name: 'mona-lisa',
         apiOrigin: 'http://localhost:3002',
       });
       // eslint-disable-next-line no-console
-      console.log('We got the Mona Lista!', monaLisa);
+      console.log('We deleted Mona Lista!', monaLisa);
 
       alertApi.post({ message: 'ACCESS GRANTED' });
     } catch {
@@ -37,14 +37,14 @@ const WelcomePage: FC<{}> = () => {
     <Page theme={pageTheme.home}>
       <Header title="Welcome" />
       <Content>
-        <ContentHeader title="Getting Started">
+        <ContentHeader title="Inventory List">
           <SupportButton />
         </ContentHeader>
         <Grid container>
-          <Grid item xs={12} md={4}>
-            <InfoCard>
+          <Grid item xs={6} md={4} lg={3}>
+            <InfoCard title="Mona Lisa">
               <Button variant="contained" color="primary" onClick={handleClick}>
-                Access Vault
+                Delete Item
               </Button>
             </InfoCard>
           </Grid>

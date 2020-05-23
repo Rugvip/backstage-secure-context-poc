@@ -44,13 +44,19 @@ export async function main() {
 
   app.use(cors());
 
-  app.get('/vault/:item', secureAction(['vault-item']), (req, res) => {
-    res.send({
-      secretItem: {
-        name: req.params.item,
-      },
-    });
-  });
+  app.delete(
+    '/vault/:item',
+    secureAction(['delete-vault-item']),
+    (req, res) => {
+      res.send({
+        deleted: [
+          {
+            name: req.params.item,
+          },
+        ],
+      });
+    },
+  );
 
   await new Promise((resolve, reject) => {
     const server = app.listen(parseInt(process.env.PORT!, 10) || 3002, err => {
