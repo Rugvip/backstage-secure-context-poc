@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ action.title }}</title>
+    <link rel="stylesheet" type="text/css" href="/action.css">
   </head>
   <body>
     <main class="ActionForm">
       <h1 class="ActionTitle">{{ action.title }}</h1>
       <p class="ActionBody">...</p>
       <div class="Buttons">
-        <button class="Button--confirm">Confirm</button>
-        <button class="Button--reject">Reject</button>
+        <button class="Button Button--confirm">CONFIRM</button>
+        <button class="Button Button--reject">REJECT</button>
       </div>
     </main>
 

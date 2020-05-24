@@ -12,10 +12,7 @@ export async function main() {
   app.set('views', resolvePath(__dirname, '../views'));
 
   app.use(cors());
-  app.use((req, _res, next) => {
-    console.log(req.url);
-    next();
-  });
+  app.use(express.static(resolvePath(__dirname, '../static')));
   app.use(
     '/actions',
     await secureContextServer({

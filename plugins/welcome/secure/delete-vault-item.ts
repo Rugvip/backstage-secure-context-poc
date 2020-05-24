@@ -2,12 +2,9 @@ export const id = 'delete-vault-item';
 
 export const title = 'Destroy Item in Vault?';
 
-export const body = `
-Are you sure you want to destroy the following item
-in your protected vault?
+export const body = `Are you sure you want to destroy the following item in your protected vault?
 
-{{ name }}
-`;
+{{ name }}`;
 
 type Data = {
   name: string;
