@@ -1,5 +1,3 @@
 # secure-context
 
-## Purpose
-
-PoC of how to execute sensitive actions in a secure browser context.
+This part of the PoC shows a server that can import and serve secure action prompts from plugins.
