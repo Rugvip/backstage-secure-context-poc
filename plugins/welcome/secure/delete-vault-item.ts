@@ -12,7 +12,10 @@ type Data = {
 };
 
 export const handler = async (data: Data) => {
-  return fetch(`${data.apiOrigin}/vault/${data.name}`, {
+  const url = new URL(data.apiOrigin);
+  url.pathname = `/vault/${data.name}`;
+
+  return fetch(url.href, {
     method: 'DELETE',
   }).then(res => res.json());
 };
